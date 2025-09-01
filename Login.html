@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Portal - Login</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css">
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="register.html">Registration</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="Dashboard.html">Dashboard</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="login-container">
+    <h2>Login</h2>
+    <div class="login-buttons">
+    <button onclick="document.getElementById('seekerLogin').style.display='block';document.getElementById('giverLogin').style.display='none'">Job Seeker Login</button>
+    <button onclick="document.getElementById('giverLogin').style.display='block';document.getElementById('seekerLogin').style.display='none'">Job Giver Login</button>
+    </div>
+  </div>
+
+
+  <!-- Job Seeker Login -->
+  <form id="seekerLogin" style="display:none;">
+    <h3>Job Seeker Login</h3>
+    <input type="text" placeholder="Phone Number" required>
+    <button type="button">Get OTP</button>
+    <input type="text" placeholder="Enter OTP" required>
+    <button type="submit">Login</button>
+  </form>
+
+  <!-- Job Giver Login -->
+  <form id="giverLogin" style="display:none;">
+    <h3>Job Giver Login</h3>
+    <input type="text" placeholder="Phone Number" required>
+    <button type="button">Get OTP</button>
+    <input type="text" placeholder="Enter OTP" required>
+    <button type="submit">Login</button>
+  </form>
+  <py-script src="app.py"></py-script>
+</body>
+<script href="script.js"></script>
+</html>
+

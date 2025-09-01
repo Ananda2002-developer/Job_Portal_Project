@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Portal - Registration</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css">
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="register.html">Registration</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="Dashboard.html">Dashboard</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="registration-container">
+    <h2>Registration</h2>
+    <div class="login-buttons">
+    <button onclick="document.getElementById('seekerForm').style.display='block';document.getElementById('giverForm').style.display='none'">Job Seeker Registration</button>
+    <button onclick="document.getElementById('giverForm').style.display='block';document.getElementById('seekerForm').style.display='none'">Job Giver Registration</button>
+    </div>
+  </div>
+
+
+  <!-- Job Seeker Registration -->
+  <form id="seekerForm" style="display:none;">
+    <h3>Job Seeker Registration</h3>
+    <input type="text" placeholder="Phone Number (Primary Key)" required>
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="date" placeholder="Date of Birth" required>
+    <input type="text" placeholder="Highest Education" required>
+    <input type="text" placeholder="Specialization" required>
+    <input type="text" placeholder="Work Experience (years)" required>
+    <button type="button">Verify OTP</button>
+    <button type="submit">Register</button>
+  </form>
+
+  <!-- Job Giver Registration -->
+  <form id="giverForm" style="display:none;">
+    <h3>Job Giver Registration</h3>
+    <input type="text" placeholder="Phone Number (Primary Key)" required>
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="text" placeholder="Company Name" required>
+    <button type="button">Verify OTP</button>
+    <button type="submit">Register</button>
+  </form>
+  <py-script src="app.py"></py-script>
+</body>
+<script href="script.js"></script>
+</html>
