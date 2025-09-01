@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Giver Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="register.html">Registration</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="Dashboard.html">Dashboard</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+<div class="dashboard-container">
+  <h2>Job Giver Dashboard</h2>
+  <div class="login-buttons">
+  <!-- Option Buttons -->
+  <button onclick="document.getElementById('postJob').style.display='block';document.getElementById('myJobs').style.display='none'">Post a Job</button>
+  <button onclick="document.getElementById('myJobs').style.display='block';document.getElementById('postJob').style.display='none'">My Job Posts</button>
+  </div>
+</div>
+
+  <!-- Post Job Form -->
+  <form id="postJob" style="display:none; max-width:400px; margin:20px auto;">
+    <h3>Post a Job</h3>
+    <input type="text" placeholder="Job Title" required>
+    <input type="text" placeholder="Specialization" required>
+    <input type="text" placeholder="Required Education" required>
+    <input type="text" placeholder="Minimum Work Experience" required>
+    <input type="text" placeholder="Location" required>
+    <input type="text" placeholder="Salary" required>
+    <button type="submit">Post Job</button>
+  </form>
+
+  <!-- My Job Posts -->
+  <div id="myJobs" style="display:none; max-width:600px; margin:20px auto;">
+    <h3>My Job Posts</h3>
+    <ul>
+      <li>
+        Software Engineer - Bangalore - ₹8 LPA
+        <button>Delete</button>
+        <button onclick="document.getElementById('applicants').style.display='block'">View Applicants</button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Applicants List -->
+  <div id="applicants" style="display:none; max-width:600px; margin:20px auto;">
+    <h3>Applicants for Software Engineer</h3>
+    <ul>
+      <li>John Doe - B.Tech CSE, 2 years exp. <button>Download Resume</button></li>
+      <li>Jane Smith - MCA, 3 years exp. <button>Download Resume</button></li>
+    </ul>
+  </div>
+
+   <h2>Job Seeker Dashboard</h2>
+
+  <!-- Available Jobs -->
+  <div class="jobs" style="max-width:600px; margin:20px auto;">
+    <h3>Available Jobs (Based on Profile)</h3>
+    <ul>
+      <li>
+        <strong>Data Analyst</strong> at <em>Deloitte</em><br>
+        Education: B.Sc Statistics | Exp: 2+ yrs | Location: Remote | Salary: ₹6 LPA<br>
+        <input type="file" accept=".pdf,.doc,.docx"> 
+        <button>Apply</button>
+      </li>
+      <br>
+      <li>
+        <strong>Software Engineer</strong> at <em>Tata Consultancy Services</em><br>
+        Education: B.E./B.Tech CSE/IT | Exp: 1+ yrs | Location: Bangalore | Salary: ₹8 LPA<br>
+        <input type="file" accept=".pdf,.doc,.docx"> 
+        <button>Apply</button>
+      </li>
+      <br>
+      <li>
+        <strong>Software Engineer</strong> at <em>CloudKaptan</em><br>
+        Education: B.E./B.Tech CSE/IT | Exp: Freshers | Location: Kolkata | Salary: ₹4 LPA<br>
+        <input type="file" accept=".pdf,.doc,.docx"> 
+        <button>Apply</button>
+      </li>
+    </ul>
+  </div>
+
+</body>
+<script href="script.js"></script>
+</html>
